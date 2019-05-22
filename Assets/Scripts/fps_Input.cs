@@ -23,9 +23,10 @@ public class fps_Input : MonoBehaviour
 
     }
 
-    private void Start()
+    void Start()
     {
-        
+        SetupDefaults();
+
     }
 
     private void AddAxis(string n, KeyCode pk, KeyCode nk)
