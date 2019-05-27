@@ -113,7 +113,10 @@
     <Compile Include="Assets\Scripts\FadeInOut.cs" />
     <Compile Include="Assets\Scripts\fps_FPCamera.cs" />
     <Compile Include="Assets\Scripts\fps_FPInput.cs" />
+    <Compile Include="Assets\Scripts\fps_Game.cs" />
     <Compile Include="Assets\Scripts\fps_Input.cs" />
+    <Compile Include="Assets\Scripts\fps_PlayerControl.cs" />
+    <Compile Include="Assets\Scripts\fps_PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\fps_PlayerParameter.cs" />
     <Compile Include="Assets\Scripts\HoloManGlitcher.cs" />
     <Compile Include="Assets\Scripts\outgame.cs" />
