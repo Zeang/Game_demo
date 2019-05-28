@@ -13,8 +13,8 @@ public class EnemyHealth : MonoBehaviour
     AudioSource enemyAudio;
     ParticleSystem hitParticles;
     CapsuleCollider capsuleCollider;
-    bool isDead;
-    bool isSinking;
+    bool isDead=false;
+    bool isSinking=false;
 
     void Awake ()
     {
@@ -41,16 +41,17 @@ public class EnemyHealth : MonoBehaviour
         if(isDead)
             return;
 
-        enemyAudio.Play ();
+        //enemyAudio.Play ();
 
         currentHealth -= amount;
             
-        hitParticles.transform.position = hitPoint;
-        hitParticles.Play();
+        //hitParticles.transform.position = hitPoint;
+        //hitParticles.Play();
 
         if(currentHealth <= 0)
         {
             Death ();
+            //StartSinking();
         }
     }
 
@@ -63,8 +64,8 @@ public class EnemyHealth : MonoBehaviour
 
         anim.SetTrigger ("Dead");
 
-        enemyAudio.clip = deathClip;
-        enemyAudio.Play ();
+        //enemyAudio.clip = deathClip;
+        //enemyAudio.Play ();
     }
 
 

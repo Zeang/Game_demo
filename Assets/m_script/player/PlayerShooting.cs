@@ -74,9 +74,9 @@ using UnityEngine.SceneManagement;
         public void DisableEffects ()
         {
             // Disable the line renderer and the light.
-            //gunLine.enabled = false;
+            gunLine.enabled = false;
 			//faceLight.enabled = false;
-            //gunLight.enabled = false;
+            gunLight.enabled = false;
         }
 
 
@@ -90,7 +90,7 @@ using UnityEngine.SceneManagement;
             //gunAudio.Play ();
 
             // Enable the lights.
-            //gunLight.enabled = true;
+            gunLight.enabled = true;
 			//faceLight.enabled = true;
 
             // Stop the particles from playing if they were, then start the particles.
@@ -98,8 +98,8 @@ using UnityEngine.SceneManagement;
             //gunParticles.Play ();
 
             // Enable the line renderer and set it's first position to be the end of the gun.
-            //gunLine.enabled = true;
-            //gunLine.SetPosition (0, transform.position);//起始点是枪管的位置
+            gunLine.enabled = true;
+            gunLine.SetPosition (0, transform.position);//起始点是枪管的位置
 
             // Set the shootRay so that it starts at the end of the gun and points forward from the barrel.
             shootRay.origin = transform.position;
@@ -110,13 +110,14 @@ using UnityEngine.SceneManagement;
             {
             // Try and find an EnemyHealth script on the gameobject hit.
             //EnemyHealth enemyHealth = shootHit.collider.gameObject.GetComponent <EnemyHealth> ();
-            Debug.Log("打中敌人");
+            Debug.Log("打中可射击层");
 
             GameObject g = shootHit.collider.gameObject;
                 
                 // If the EnemyHealth component exist...
                 if (g.CompareTag("enemy"))//是有血量的敌人
                 {
+                Debug.Log("打中敌人");
                     // ... the enemy should take damage.
                     g.GetComponent<EnemyHealth>().TakeDamage (damagePerShot, shootHit.point);
                     Debug.Log(g.GetComponent<EnemyHealth>());
