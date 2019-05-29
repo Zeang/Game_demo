@@ -87,7 +87,7 @@ using UnityEngine.SceneManagement;
             timer = 0f;
 
             // Play the gun shot audioclip.
-            //gunAudio.Play ();
+            gunAudio.Play ();
 
             // Enable the lights.
             gunLight.enabled = true;
